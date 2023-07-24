@@ -1,12 +1,12 @@
 !!!
-%html
+%html{lang: "ja"}
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{charset: "utf-8"}/
     %meta{content: "ie=edge", "http-equiv" => "x-ua-compatible"}/
     %meta{content: "width=device-width, initial-scale=1, shrink-to-fit=no", name: "viewport"}/
     / Use the title from a page's frontmatter if it has one
-    %title= current_page.data.title || "Middleman"
+    %title= current_page.data.title || "大江戸Ruby会議10"
     = stylesheet_link_tag "site"
     = javascript_include_tag "site"
   %body

@@ -1,16 +1,24 @@
-body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
-}
+//token
+$primary-color: #00AB4F;
+$secondary-color: #007938;
 
+body {
+  background-color: $primary-color;
+  color: #1e1e1e;
+  font-size: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+h1 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
 a {
-  color: rgba(#000, 0.7);
+  color: white;
 
   &:focus,
   &:hover {
@@ -18,7 +26,380 @@ a {
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+
+.p-eye-catch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0 10rem;
+  background-image: url("/images/backGround.png");
+  background-repeat: repeat;
+  background-position: top center;
+  &__block--adress {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  &__img--logo {
+    position: relative;
+    left: 18px;
+    z-index: 100;
+  }
+  &__block {
+    padding-top: 2rem;
+  }
+  &__block--panda {
+    position: absolute;
+    bottom: 0;
+    width: 124.5px;
+    height: 90px;
+    animation: panda 20s forwards;
+  }
+  &__img--pandacar {
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 124.5px;
+    height: 90px;
+    background-image: url("/images/pandaBody.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    z-index: 5;
+    &-leg {
+      position: absolute;
+      bottom: 0;
+      width: 18px;
+      height: 29px;
+      background-image: url("/images/pandaLeg.svg");
+      background-repeat: no-repeat;
+      background-position: top left;
+      transition-timing-function: ease-out;
+      &.is-foward {
+        left: 40px;
+      }
+      &.is-back {
+        right: 2px;
+      }
+      &.is-right {
+        z-index: 1;
+        animation: pandaLegRight 3s infinite;
+      }
+      &.is-left {
+        z-index: 10;
+        animation: pandaLegLeft 3s infinite;
+      }
+    }
+  }
+  &__block--light {
+    position: absolute;
+    top: 0;
+    width: 95px;
+    height: 100px;
+    background-image: url("/images/lightLine.svg");
+    background-size: 6px 100px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    cursor: pointer;
+    &.is-left-1 {
+      left: 10%;
+    }
+    &.is-left-2 {
+      left: 20%;
+    }
+    &.is-left-3 {
+      left: 30%;
+    }
+    &.is-right-1 {
+      right: 10%;
+    }
+    &.is-right-2 {
+      right: 20%;
+    }
+    &.is-right-3 {
+      right: 30%;
+    }
+  }
+  &__img--light {
+    position: absolute;
+    top: 20px;
+    width: 95px;
+    height: 100px;
+    background-size: 95px 100px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    &:hover {
+      animation: light 1s infinite;
+    }
+    &.is-Red {
+      background-image: url("/images/lightRed.svg");
+    }
+    &.is-Yellow {
+      background-image: url("/images/lightYellow.svg");
+    }
+    &.is-Blue {
+      background-image: url("/images/lightBlue.svg");
+    }
+  }
+}
+
+.p-time-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 0 7rem;
+  background-color: white;
+  &__title {
+    color: $primary-color;
+    font-size: 2.5rem;
+  }
+  &__block {
+    width: 60%;
+    padding: 4rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: $primary-color;
+  }
+}
+
+.p-after-party {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 0 7rem;
+  &__title {
+    font-size: 2.5rem;
+    text-align: center;
+    & span {
+      font-size: 1rem;
+      font-weight: normal;
+      display: block;
+    }
+  }
+  &__block {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  &__link {
+    font-size: 2.5rem;
+  }
+  &__img--left {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 186px;
+    height: 424px;
+    background-image: url("/images/tower.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+  &__img--right {
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    width: 253px;
+    height: 380px;
+    background-image: url("/images/entrance.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+}
+
+.p-footer {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  color: $primary-color;
+  font-weight: bold;
+  font-size: 1.25rem;
+  background-color: $secondary-color;
+  &__link--twitter {
+    padding-left: 1rem;
+    img {
+      width: 20px;
+      height: auto;
+    }
+    &:hover {
+      img {
+        width: 28px;
+        height: auto;
+        transition: 0.4s;
+      }
+    }
+  }
+}
+
+.c-button--submit {
+  position: relative;
+  display: block;
+  padding: 1.2rem 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 1px 2px 2px 1px;
+  background-color: $primary-color;
+  z-index: 1;
+  &:hover {
+    background-color: white;
+    color: $primary-color;
+    letter-spacing: 4px;
+    transition: 0.4s;
+  }
+}
+
+.c-link {
+  &--map {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    font-size: 1rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.4s;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 10px;
+      width: 15px;
+      height: 25px;
+      background-image: url("/images/map.svg");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+    }
+    &:hover {
+      font-size: 1.5rem;
+      color: white;
+      &:before {
+        left: -24px;
+        width: 18px;
+      }
+    }
+  }
+}
+
+@keyframes panda {
+  0% {
+  transform: translateX(100%);
+  }
+
+  100% {
+  transform: translateX(-120%);
+  }
+}
+@keyframes pandaLegRight {
+  0% {
+    transform:rotate(10deg);
+    transform-origin:0 0;
+  }
+  25% {
+    transform:rotate(-10deg);
+    transform-origin:0 0;
+  }
+  50% {
+    transform:rotate(10deg);
+    transform-origin:0 0;
+  }
+  75% {
+    transform:rotate(-10deg);
+    transform-origin:0 0;
+  }
+  100% {
+    transform:rotate(10deg);
+    transform-origin:0 0;
+  }
+}
+@keyframes pandaLegLeft {
+  0% {
+    transform:rotate(-10deg);
+    transform-origin:0 0;
+  }
+  25% {
+    transform:rotate(10deg);
+    transform-origin:0 0;
+  }
+  50% {
+    transform:rotate(-10deg);
+    transform-origin:0 0;
+  }
+  75% {
+    transform:rotate(10deg);
+    transform-origin:0 0;
+  }
+  100% {
+    transform:rotate(-10deg);
+    transform-origin:0 0;
+  }
+}
+@keyframes light {
+  0% {
+  transform: translateY(0);
+  }
+
+  100% {
+  transform: translateY(65%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .p-eye-catch {
+    padding: 1rem 0 10rem;
+    h1 {
+      text-align: center;
+      line-height: 1;
+    }
+    &__img--logo {
+      position: relative;
+      left: 14px;
+      width: 90%;
+      height: 260px;
+    }
+    &__block--adress {
+      font-size: 1rem;
+    }
+    &__block--light {
+      display: none;
+    }
+  }
+  .p-time-table {
+    padding: 1rem 0 4rem;
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    &__block {
+      width: 90%;
+      font-size: 1.25rem;
+      padding: 2rem 0;
+      box-sizing: border-box;
+    }
+  }
+  .p-after-party {
+    padding: 2rem 0 5rem;
+    &__title {
+      font-size: 1.5rem;
+    }
+    &__block {
+      margin-bottom: 3rem;
+      font-size: 1rem;
+    }
+    &__img--left {
+      display: none;
+    }
+    &__img--right {
+      right: 0;
+    }
+  }
+  .c-button--submit {
+    font-size: 1.25rem;
+  }
 }

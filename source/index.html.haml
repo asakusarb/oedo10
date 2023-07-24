@@ -1,10 +1,56 @@
 ---
-title: Welcome to Middleman
+title: 大江戸Ruby会議10
 ---
-%h1
-  Middleman is Running
-= link_to(                                                  |
-    "Read Documentation",                                   |
-    "https://middlemanapp.com/basics/templating_language/", |
-    target: "_blank"                                        |
-  )                                                         |
+%section.p-eye-catch
+  %h1
+    %img.p-eye-catch__img--logo(src="/images/logo.svg" alt="大江戸Ruby会議10")
+  .p-eye-catch__block--adress
+    %p 2023年10月15日
+    %p 浅草 雷5656会館 5F・6F『ときわホール』
+    =link_to "GoogleMap", "https://goo.gl/maps/qjAyancU9HHiVcMS6", class:"c-link--map"
+  .p-eye-catch__block
+    =link_to "参加チケットを購入する", "#", class:"c-button--submit"
+
+  .p-eye-catch__block--light.is-left-1
+    .p-eye-catch__img--light.is-Red
+  .p-eye-catch__block--light.is-left-2
+    .p-eye-catch__img--light.is-Yellow
+  .p-eye-catch__block--light.is-left-3
+    .p-eye-catch__img--light.is-Blue
+
+  .p-eye-catch__block--light.is-right-1
+    .p-eye-catch__img--light.is-Red
+  .p-eye-catch__block--light.is-right-2
+    .p-eye-catch__img--light.is-Yellow
+  .p-eye-catch__block--light.is-right-3
+    .p-eye-catch__img--light.is-Blue
+
+  .p-eye-catch__block--panda
+    .p-eye-catch__img--pandacar
+    .p-eye-catch__img--pandacar-leg.is-foward.is-right 
+    .p-eye-catch__img--pandacar-leg.is-foward.is-left 
+    .p-eye-catch__img--pandacar-leg.is-back.is-right 
+    .p-eye-catch__img--pandacar-leg.is-back.is-left
+
+%section.p-time-table
+  %h2.p-time-table__title
+    %img(src="/images/timeTable.svg" alt="Time Table")
+  .p-time-table__block 近日公開予定
+
+%section.p-after-party
+  %h2.p-after-party__title
+    %img(src="/images/afterParty.svg" alt="After Party")
+    %span 18:00 - 22:00
+  .p-after-party__block
+    %p 東京都台東区浅草2-28-1
+    %p 花やしき
+    =link_to "GoogleMap", "https://goo.gl/maps/qixcKYyS2YWKWskb6", class:"c-link--map"
+  .p-after-party__block
+    =link_to "懇親会チケットを購入する", "#", class:"c-button--submit"
+  .p-after-party__img--left
+  .p-after-party__img--right
+
+%footer.p-footer
+  %p Asakusa.rb
+  =link_to "https://twitter.com/asakusarb", class:"p-footer__link--twitter" do
+    %img{src:"/images/twitter.svg", alt:"Twitterアイコン"}
