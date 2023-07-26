@@ -15,6 +15,9 @@ page '/*.txt', layout: false
 
 set :haml, { :format => :html5 }
 
+set :relative_links, true
+activate :relative_assets
+
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
