@@ -1,0 +1,34 @@
+name: Middleman
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build_and_deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2
+          bundler-cache: true
+
+      - run: 'bundle e middleman build --verbose'
+
+      - uses: actions/upload-pages-artifact@v2
+        with:
+          path: build
+
+      - id: deployment
+        uses: actions/deploy-pages@v2
