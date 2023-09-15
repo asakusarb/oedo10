@@ -194,12 +194,20 @@ a {
     }
   }
   &__text--guide {
-    margin: 1.5rem auto 0;
-    font-size: 0.875rem;
-    background: rgba(255,255,255,.53);
-    padding: 1rem;
-    width: 260px;
-    border-radius: 4px;
+    position: relative;
+    margin: 3rem auto 0;
+    color: $primary-color;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    &:before {
+      content: "👇🏻";
+      position: absolute;
+      top: -2.5rem;
+      left: 50%;
+      margin-left: -16px;
+      font-size: 2rem;
+    }
   }
 }
 
@@ -416,7 +424,7 @@ a {
       margin-bottom: 0.5rem;
     }
     &__block {
-      width: 90%;
+      width: 100%;
       font-size: 1.25rem;
       padding: 2rem 0;
       box-sizing: border-box;
