@@ -154,18 +154,6 @@ a {
     position: relative;
     color: $primary-color;
     font-size: 2.5rem;
-    &:before {
-      content: "WIP";
-      position: absolute;
-      color: white;
-      background-color: black;
-      right: -1rem;
-      bottom: -1rem;
-      padding: 0.25rem 1rem;
-      font-size: 0.5rem;
-      transform: skewX(335deg);
-      letter-spacing: 3px;
-    }
   }
   &__block {
     width: 60%;
