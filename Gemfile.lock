@@ -95,7 +95,7 @@ GEM
     parallel (1.23.0)
     parslet (2.0.0)
     public_suffix (7.0.5)
-    rack (3.2.6)
+    rack (3.2.8)
     rackup (2.3.1)
       rack (>= 3)
     rb-fsevent (0.11.2)
